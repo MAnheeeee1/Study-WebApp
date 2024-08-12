@@ -1,0 +1,43 @@
+<!DOCTYPE html>                                                                                          
+<html lang="en" xmlns="http://www.w3.org/1999/html">                                                     
+<head>                                                                                                   
+    <meta charset="UTF-8">                                                                               
+    <meta name="viewport" content="width=device-width, initial-scale=0.1"/>                              
+    <link rel="stylesheet" href="styles.css"/>                                                           
+    <title>Study App</title>                                                                             
+</head>                                                                                                  
+<body>                                                                                                   
+    <button id="createFlashCard">Create flash card</button>                                              
+    <dialog id="flashCardDialog">                                                                        
+        <form id="flashCardForm">                                                                        
+            <fieldset id="flashCardSetInfo">                                                             
+                <label for="title">Title: <input type="text" id="title"></label>                         
+                <label for="description">Description: <input type="text" id="description"></label>       
+            </fieldset>                                                                                  
+            <div id="flashCards">                                                                        
+                <div class="container">                                                                  
+                    <fieldset id="termQuestionField">                                                    
+                        <legend>Term/Question</legend>                                                   
+                        <label for="term1"><input type="text" id="term1"></label>                        
+                        <label for="term2"><input type="text" id="term2"></label>                        
+                        <label for="term3"><input type="text" id="term3"></label>                        
+                        <label for="term4"><input type="text" id="term4"></label>                        
+                    </fieldset>                                                                          
+                    <fieldset id="answerDefinitionField">                                                
+                        <legend>Answer/Definition</legend>                                               
+                        <label for="answer1"><input type="text" id="answer1"></label>                    
+                        <label for="answer2"><input type="text" id="answer2"></label>                    
+                        <label for="answer3"><input type="text" id="answer3"></label>                    
+                        <label for="answer4"><input type="text" id="answer4"></label>                    
+                    </fieldset>                                                                          
+                </div>                                                                                   
+                <button id="addCard">+</button>                                                          
+            </div>                                                                                       
+            <button type="button">Save</button>                                                          
+            <button type="button">Save & Revise</button>                                                 
+        </form>                                                                                          
+    </dialog>                                                                                            
+                                                                                                         
+    <script src="script.js"></script>                                                                    
+</body>                                                                                                  
+</html>                                                                                                  
