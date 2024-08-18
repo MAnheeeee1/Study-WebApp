@@ -1,4 +1,4 @@
-let userFlashCards = {};
+let userFlashCards = [];
 let flashCardDialog = document.getElementById("flashCardDialog");
 let createFcBtn = document.getElementById("createFlashCard");
 let addFlashCardBtn = document.getElementById("addCard");
@@ -53,11 +53,12 @@ function saveFlashCard() {
   }
 
   let flashcard = {
+    title: title,
     description: description,
     terms: termsArray,
     answers: answersArray,
   };
-  userFlashCards[title] = flashcard;
+  userFlashCards.push(flashcard);
   flashCardDialog.close();
   updateFlashCardContainer();
   alert("Successfully saved your flashcards!");
@@ -74,8 +75,21 @@ function formValidation(event) {
 }
 
 function updateFlashCardContainer() {
-  for (flashcard in userFlashCards) {
-    let flashCardTitle = userFlashCards[flashcard];
-    console.log(flashCardTitle);
+  flashCardContainer.innerHTML = "";
+  for (flashcard of userFlashCards) {
+    let containerElement = document.createElement("div");
+    containerElement.classList.add("card");
+
+    let h2Element = document.createElement("h2");
+    h2Element.classList.add("card");
+    h2Element.textContent = flashcard.title;
+
+    let pElement = document.createElement("p");
+    pElement.classList.add("p");
+    pElement.textContent = flashcard.description;
+
+    containerElement.appendChild(h2Element);
+    containerElement.appendChild(pElement);
+    flashCardContainer.appendChild(containerElement);
   }
 }
