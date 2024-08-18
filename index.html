@@ -11,7 +11,9 @@
     <dialog id="flashCardDialog">
       <form id="flashCardForm">
         <fieldset id="flashCardSetInfo">
-          <label for="title">Title: <input type="text" id="title" /></label>
+          <label for="title"
+            >Title: <input type="text" id="title" required
+          /></label>
           <label for="description"
             >Description: <input type="text" id="description"
           /></label>
@@ -35,10 +37,16 @@
           </div>
           <button id="addCard" type="button">+</button>
         </div>
-        <button id="creataFlashCard" type="button">Save</button>
+        <button id="creataFlashCard" type="submit1">Save</button>
         <button type="button">Save & Revise</button>
       </form>
     </dialog>
+    <div id="flashcardHolder">
+      <h2>
+        You currently don´t have any flashcards, start by clicking "Create flash
+        card"
+      </h2>
+    </div>
 
     <script src="script.js"></script>
   </body>
